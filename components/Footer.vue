@@ -14,7 +14,6 @@
 
 .copyright {
   font-size: 14px;
-  font-family: $font-ubuntu;
   text-align: center;
 }
 </style>

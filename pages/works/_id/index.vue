@@ -69,3 +69,16 @@
 <style lang="scss" scoped>
 
 </style>
+
+<script>
+export default {
+  async asyncData({ $microcms }) {
+    const works = await $microcms.get({
+      endpoint: 'works',
+    })
+    return {
+      works,
+    }
+  },
+}
+</script>
