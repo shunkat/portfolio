@@ -1,2 +1,5 @@
 tasks:
   - command: "yarn add nuxt-microcms-module"
+vscode:
+  extensions:
+    - https://marketplace.visualstudio.com/items?itemName=johnsoncodehk.volar
