@@ -2,4 +2,4 @@ tasks:
   - command: "yarn add nuxt-microcms-module"
 vscode:
   extensions:
-    - https://marketplace.visualstudio.com/items?itemName=johnsoncodehk.volar
+    - octref.vetur@0.23.0:TEzauMObB6f3i2JqlvrOpA==
