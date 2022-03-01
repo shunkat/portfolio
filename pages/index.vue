@@ -9,55 +9,57 @@
         <img src="https://placehold.jp/1440x436.png" alt="" />
       </picture>
     </div>
-
-    <section id="introduction" class="sectionPrimary">
+    <!-- ここから自分の情報に編集してください -->
+    <section id="introduction" class="primary">
       <div class="container">
-        <h2 class="introduction">自己紹介</h2>
+        <h2 class="middleTitle">自己紹介</h2>
         <div class="profile">
-          <h1 class="name">加藤　竣</h1>
-          <dl class="tech">
-            <h3 class="profile__title">技術スタック</h3>
-            <dd>HTML / CSS / jQuery / JavaScript / Nuxt</dd>
-          </dl>
-          <dl class="hobby">
-            <dt class="profile__title">趣味</dt>
-            <dd>開発、陶芸、競技ダンス、登山、映画鑑賞</dd>
-          </dl>
-          <figure class="profile__image">
+          <h1 class="name">＜名前をここに＞</h1>
+          <div class="tech">
+            <h3>技術領域</h3>
+            <p>＜技術スタックをここに＞</p>
+          </div>
+          <div class="hobby">
+            <h3>趣味</h3>
+            <p>＜趣味をここに＞</p>
+          </div>
+          <figure class="selfee">
             <img src="https://placehold.jp/260x260.png" alt="your name" />
           </figure>
-          <p class="profile__message">
-            自己紹介を入れましょう。出身や経歴と現在の仕事の内容を簡単に話すも良し。<br />数年後の目標や今学んでいること、活動している内容を入れるのも良いかと思います。
+          <p class="detailintroduction">
+            ＜こまかい自己紹介はここに入れてみましょう＞<br />
+            例えば、どうしてエンジニアになったのかorなりたいのかなど<br />
+            もし思いつかなければ好きなご飯のおかずを書いてください。
           </p>
         </div>
       </div>
     </section>
+    <!-- ここまで編集 -->
 
-    <section class="sectionPrimary background--gray">
+    <section id="works" class="primary">
       <div class="container">
-        <h2 class="headingPrimary">works</h2>
-                <ol class="row works">
-          <li v-for="work in works.contents" :key="work.id" class="works__item">
-            <nuxt-link :to="`/works/${work.id}/`" class="works__inner">
-              <figure class="works__image">
+        <h2 class="middleTitle">制作物</h2>
+        <!-- ここからコメントアウト外す -->
+        <div class="products">
+          <div v-for="content in contents.contents" :key="content.id" class="eachProduct">
+            <nuxt-link :to="`/works/${content.id}/`" class="productWrapper">
+              <div class="title">
+                <p class="works__name">{{ content.title }}</p>
+              </div>
+              <figure class="productImage">
                 <img
-                  :width="work.capture.width"
-                  :height="work.capture.height"
-                  :src="work.capture.url"
-                  :alt="work.title"
+                  :width="260"
+                  :height="260"
+                  :src="content.capture.url"
+                  :alt="content.title"
                 />
               </figure>
-              <div class="works__text">
-                <p class="works__name">{{ work.title }}</p>
-                <p class="works__date">
-                  <time :datetime="work.release">{{ work.release }}</time>
-                </p>
-              </div>
             </nuxt-link>
-          </li>
-        </ol>
+          </div>
+        </div>
+        <!-- ここまでコメントアウト外す -->
         <p class="button-area">
-          <nuxt-link to="/works" class="buttonPrimary">view more</nuxt-link>
+          <nuxt-link to="/contact/" class="button">お問い合わせ</nuxt-link>
         </p>
       </div>
     </section>
@@ -68,17 +70,20 @@
 .mainVisual img {
   width: 100%;
 }
+.products{
+  display: flex;
+}
 </style>
 
 <script>
 export default {
   async asyncData({ $microcms }) {
-    const works = await $microcms.get({
-      endpoint: 'works',
+    const contents = await $microcms.get({
+      endpoint: 'products',
       queries: { limit: 2 },
     })
     return {
-      works,
+      contents,
     }
   },
 }
