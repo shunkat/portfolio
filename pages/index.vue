@@ -10,28 +10,22 @@
       </picture>
     </div>
 
-    <section id="about" class="sectionPrimary">
+    <section id="introduction" class="sectionPrimary">
       <div class="container">
-        <h2 class="headingPrimary">about</h2>
+        <h2 class="introduction">自己紹介</h2>
         <div class="profile">
-          <div class="profile__upper">
-            <div class="profile__text">
-              <p class="profile__name">
-                加藤　竣<span lang="en">Shun Kato</span>
-              </p>
-              <dl class="profile__item">
-                <dt class="profile__title">技術スタック</dt>
-                <dd>HTML / CSS / jQuery / JavaScript / Nuxt</dd>
-              </dl>
-              <dl class="profile__item">
-                <dt class="profile__title">趣味</dt>
-                <dd>開発、陶芸、競技ダンス、登山、映画鑑賞</dd>
-              </dl>
-            </div>
-            <figure class="profile__image">
-              <img src="https://placehold.jp/260x260.png" alt="your name" />
-            </figure>
-          </div>
+          <h1 class="name">加藤　竣</h1>
+          <dl class="tech">
+            <h3 class="profile__title">技術スタック</h3>
+            <dd>HTML / CSS / jQuery / JavaScript / Nuxt</dd>
+          </dl>
+          <dl class="hobby">
+            <dt class="profile__title">趣味</dt>
+            <dd>開発、陶芸、競技ダンス、登山、映画鑑賞</dd>
+          </dl>
+          <figure class="profile__image">
+            <img src="https://placehold.jp/260x260.png" alt="your name" />
+          </figure>
           <p class="profile__message">
             自己紹介を入れましょう。出身や経歴と現在の仕事の内容を簡単に話すも良し。<br />数年後の目標や今学んでいること、活動している内容を入れるのも良いかと思います。
           </p>
