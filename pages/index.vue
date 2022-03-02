@@ -32,7 +32,7 @@
       <div class="container">
         <h2 class="middleTitle">制作物</h2>
         <!-- ここからコメントアウト外す -->
-        <!-- <div class="products">
+        <div class="products">
           <div v-for="content in contents.contents" :key="content.id" class="eachProduct">
             <nuxt-link :to="`/works/${content.id}/`">
               <div class="productWrapper">
@@ -50,10 +50,10 @@
               </div>
             </nuxt-link>
           </div>
-        </div> -->
+        </div>
         <!-- ここまでコメントアウト外す -->
         <!-- ここからコメントアウト -->
-        <div class="products">
+        <!-- <div class="products">
           <div class="eachProduct">
             <nuxt-link :to="`/works/`">
               <div class="productWrapper">
@@ -90,7 +90,8 @@
               </div>
             </nuxt-link>
           </div>
-        </div>
+        </div> -->
+        <!-- ここまでコメントアウト -->
       </div>
       
     </section>

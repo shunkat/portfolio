@@ -6,7 +6,7 @@
         google つくりました。詳細説明はここらへんに
         </p>
         <figure class="capture">
-            <img src="/google.png" alt="" />
+            <img src="/google.png" width=260 height=260 alt="" />
         </figure>
 
         <div class="detail">
