@@ -138,14 +138,15 @@ img {
 </style>
 
 <script>
-export default {
-  async asyncData({ $microcms }) {
-    const contents = await $microcms.get({
-      endpoint: 'products'
-    })
-    return {
-      contents,
-    }
-  },
-}
+// コメントアウト外す
+// export default {
+//   async asyncData({ $microcms }) {
+//     const contents = await $microcms.get({
+//       endpoint: 'products'
+//     })
+//     return {
+//       contents,
+//     }
+//   },
+// }
 </script>
