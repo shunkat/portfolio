@@ -32,7 +32,7 @@
       <div class="container">
         <h2 class="middleTitle">制作物</h2>
         <!-- ここからコメントアウト外す -->
-        <div class="products">
+        <!-- <div class="products">
           <div v-for="content in contents.contents" :key="content.id" class="eachProduct">
             <nuxt-link :to="`/works/${content.id}/`">
               <div class="productWrapper">
@@ -48,11 +48,49 @@
                   />
                 </figure>
               </div>
-              
+            </nuxt-link>
+          </div>
+        </div> -->
+        <!-- ここまでコメントアウト外す -->
+        <!-- ここからコメントアウト -->
+        <div class="products">
+          <div class="eachProduct">
+            <nuxt-link :to="`/works/`">
+              <div class="productWrapper">
+                <div class="title">
+                <p class="productTitle">サンプルプロダクト</p>
+                </div>
+                <figure class="productImage">
+                  <img width="260" height="260" src="/markingCloud.png" alt="sampleImageOfProduct" />
+                </figure>
+              </div>
+            </nuxt-link>
+          </div>
+          <div class="eachProduct">
+            <nuxt-link :to="`/works/`">
+              <div class="productWrapper">
+                <div class="title">
+                <p class="productTitle">サンプルプロダクト2</p>
+                </div>
+                <figure class="productImage">
+                  <img width="260" height="260" src="/isoroot_logo.png" alt="sampleImageOfProduct" />
+                </figure>
+              </div>
+            </nuxt-link>
+          </div>
+          <div class="eachProduct">
+            <nuxt-link :to="`/works/`">
+              <div class="productWrapper">
+                <div class="title">
+                <p class="productTitle">サンプルプロダクト3</p>
+                </div>
+                <figure class="productImage">
+                  <img width="260" height="260" src="/google.png" alt="sampleImageOfProduct" />
+                </figure>
+              </div>
             </nuxt-link>
           </div>
         </div>
-        <!-- ここまでコメントアウト外す -->
       </div>
       
     </section>
