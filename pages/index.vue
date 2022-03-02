@@ -1,90 +1,150 @@
 <template>
   <div>
-    <div class="mainVisual">
-      <picture>
-        <source
-          srcset="https://placehold.jp/375x530.png"
-          media="(max-width: 767px)"
-        />
-        <img src="https://placehold.jp/1440x436.png" alt="" />
-      </picture>
-    </div>
-
-    <section id="about" class="sectionPrimary">
+    <!-- ここから自分の情報に編集してください -->
+    <section id="introduction" class="primary">
       <div class="container">
-        <h2 class="headingPrimary">about</h2>
         <div class="profile">
-          <div class="profile__upper">
-            <div class="profile__text">
-              <p class="profile__name">
-                加藤　竣<span lang="en">Shun Kato</span>
-              </p>
-              <dl class="profile__item">
-                <dt class="profile__title">技術スタック</dt>
-                <dd>HTML / CSS / jQuery / JavaScript / Nuxt</dd>
-              </dl>
-              <dl class="profile__item">
-                <dt class="profile__title">趣味</dt>
-                <dd>開発、陶芸、競技ダンス、登山、映画鑑賞</dd>
-              </dl>
-            </div>
-            <figure class="profile__image">
-              <img src="https://placehold.jp/260x260.png" alt="your name" />
-            </figure>
+          <h2 class="middleTitle">自己紹介</h2>
+          <h1 class="name">＜名前をここに＞</h1>
+          <div class="tech">
+            <h3>技術領域</h3>
+            <p>＜技術スタックをここに＞</p>
           </div>
-          <p class="profile__message">
-            自己紹介を入れましょう。出身や経歴と現在の仕事の内容を簡単に話すも良し。<br />数年後の目標や今学んでいること、活動している内容を入れるのも良いかと思います。
+          <div class="hobby">
+            <h3>趣味</h3>
+            <p>＜趣味をここに＞</p>
+          </div>
+          <h3>どんな人</h3>
+          <p class="detailintroduction">
+            ＜こまかい自己紹介はここに入れてみましょう＞<br />
+            例えば、どうしてエンジニアになったのかorなりたいのかなど<br />
+            もし思いつかなければ好きなご飯のおかずを書いてください。
           </p>
         </div>
+        <figure class="selfee">
+          <img src="/yourIcon.jpg" width=260 height=260 alt="your name" />
+        </figure>
       </div>
     </section>
+    <!-- ここまで編集 -->
 
-    <section class="sectionPrimary background--gray">
+    <section id="works" class="primary">
       <div class="container">
-        <h2 class="headingPrimary">works</h2>
-                <ol class="row works">
-          <li v-for="work in works.contents" :key="work.id" class="works__item">
-            <nuxt-link :to="`/works/${work.id}/`" class="works__inner">
-              <figure class="works__image">
-                <img
-                  :width="work.capture.width"
-                  :height="work.capture.height"
-                  :src="work.capture.url"
-                  :alt="work.title"
-                />
-              </figure>
-              <div class="works__text">
-                <p class="works__name">{{ work.title }}</p>
-                <p class="works__date">
-                  <time :datetime="work.release">{{ work.release }}</time>
-                </p>
+        <h2 class="middleTitle">制作物</h2>
+        <!-- ここからコメントアウト外す -->
+        <!-- <div class="products">
+          <div v-for="content in contents.contents" :key="content.id" class="eachProduct">
+            <nuxt-link :to="`/works/${content.id}/`">
+              <div class="productWrapper">
+                <div class="title">
+                <p class="works__name">{{ content.title }}</p>
+                </div>
+                <figure class="productImage">
+                  <img
+                    :width="260"
+                    :height="260"
+                    :src="content.capture.url"
+                    :alt="content.title"
+                  />
+                </figure>
               </div>
             </nuxt-link>
-          </li>
-        </ol>
-        <p class="button-area">
-          <nuxt-link to="/works" class="buttonPrimary">view more</nuxt-link>
-        </p>
+          </div>
+        </div> -->
+        <!-- ここまでコメントアウト外す -->
+        <!-- ここからコメントアウト -->
+        <div class="products">
+          <div class="eachProduct">
+            <nuxt-link :to="`/works/`">
+              <div class="productWrapper">
+                <div class="title">
+                <p class="productTitle">サンプルプロダクト</p>
+                </div>
+                <figure class="productImage">
+                  <img width="260" height="260" src="/markingCloud.png" alt="sampleImageOfProduct" />
+                </figure>
+              </div>
+            </nuxt-link>
+          </div>
+          <div class="eachProduct">
+            <nuxt-link :to="`/works/`">
+              <div class="productWrapper">
+                <div class="title">
+                <p class="productTitle">サンプルプロダクト2</p>
+                </div>
+                <figure class="productImage">
+                  <img width="260" height="260" src="/isoroot_logo.png" alt="sampleImageOfProduct" />
+                </figure>
+              </div>
+            </nuxt-link>
+          </div>
+          <div class="eachProduct">
+            <nuxt-link :to="`/works/`">
+              <div class="productWrapper">
+                <div class="title">
+                <p class="productTitle">サンプルプロダクト3</p>
+                </div>
+                <figure class="productImage">
+                  <img width="260" height="260" src="/google.png" alt="sampleImageOfProduct" />
+                </figure>
+              </div>
+            </nuxt-link>
+          </div>
+        </div>
+        <!-- ここまでコメントアウト -->
       </div>
+      
     </section>
+    <div class="button-area">
+          <nuxt-link to="/contact/" class="button">お問い合わせ</nuxt-link>
+      </div>
   </div>
 </template>
 
 <style lang="css" scoped>
+body {
+  width: 1250px;
+}
 .mainVisual img {
   width: 100%;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 12px;
+}
+#works {
+  background-color: orange;
+}
+.products{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+}
+.eachProduct{
+  width: 50%;
+}
+.productWrapper{
+  display: flex;
+  flex-wrap: wrap;
+}
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto 
 }
 </style>
 
 <script>
 export default {
   async asyncData({ $microcms }) {
-    const works = await $microcms.get({
-      endpoint: 'works',
-      queries: { limit: 2 },
+    const contents = await $microcms.get({
+      endpoint: 'products'
     })
     return {
-      works,
+      contents,
     }
   },
 }
