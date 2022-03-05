@@ -1,7 +1,6 @@
 <template>
   <div>
     <!-- ここから自分の情報に編集してください -->
-    <!-- <section id="introduction" class="primary"> -->
     <section id="introduction">
       <div class="container">
         <div class="profile">
@@ -29,7 +28,6 @@
     </section>
     <!-- ここまで編集 -->
 
-    <!-- <section id="works" class="primary"> -->
     <section id="works">
       <div class="container">
         <h2 class="middleTitle">制作物</h2>
