@@ -1,15 +1,15 @@
 <template>
-  <v-row justify="center" align-content="center">
+  <v-row justify="center" align-content="center" class="mx-16">
     <v-col cols="12" align="center">
       <v-spacer class="my-16" />
       <v-row>
         <!-- 画像 -->
-        <v-col cols="7" align="right">
+        <v-col cols="6" align="right">
           <v-img contain height="300" :src="product.capture.url" />
         </v-col>
 
         <!-- タイトル・概要 -->
-        <v-col cols="5" align="left" class="my-8">
+        <v-col cols="6" align="left" class="my-8">
           <p class="text-h3 mb-8">{{ product.title }}</p>
           <p class="text-h6 text--primary">{{ product.overview }}</p>
         </v-col>
