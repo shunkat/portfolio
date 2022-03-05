@@ -10,9 +10,7 @@
         <nuxt />
       </v-container>
     </v-main>
-    <v-footer dark color="orange" app>
-      <span>© 2022 MarkingCloud</span>
-    </v-footer>
+    <p class="footer">© 2022 MarkingCloud</p>
   </v-app>
 </template>
 
@@ -35,5 +33,9 @@ export default {
 <style>
 * {
   font-family: auto;
+}
+
+.footer {
+  text-align: center;
 }
 </style>
