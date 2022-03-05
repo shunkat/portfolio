@@ -1,7 +1,8 @@
 <template>
   <div>
     <!-- ここから自分の情報に編集してください -->
-    <section id="introduction" class="primary">
+    <!-- <section id="introduction" class="primary"> -->
+    <section id="introduction">
       <div class="container">
         <div class="profile">
           <h2 class="middleTitle">自己紹介</h2>
@@ -28,7 +29,8 @@
     </section>
     <!-- ここまで編集 -->
 
-    <section id="works" class="primary">
+    <!-- <section id="works" class="primary"> -->
+    <section id="works">
       <div class="container">
         <h2 class="middleTitle">制作物</h2>
 
@@ -81,7 +83,7 @@
 </template>
 
 <style lang="css" scoped>
-body {
+/* body {
   width: 1250px;
 }
 .mainVisual img {
@@ -112,7 +114,7 @@ img {
   display: block;
   margin-left: auto;
   margin-right: auto;
-}
+} */
 </style>
 
 <script>
