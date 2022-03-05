@@ -22,7 +22,7 @@
           </p>
         </div>
         <figure class="selfee">
-          <img src="/yourIcon.jpg" width=390 height=390 alt="your name" />
+          <img src="/yourIcon.jpg" width="390" height="390" alt="your name" />
         </figure>
       </div>
     </section>
@@ -33,7 +33,7 @@
         <h2 class="middleTitle">制作物</h2>
 
         <!-- ここからコメントアウト -->
-        <div class="products">
+        <!-- <div class="products">
           <div v-for="i of 3" :key="i" class="eachProduct">
             <nuxt-link :to="`/works/`">
               <div class="productWrapper">
@@ -44,16 +44,20 @@
               </div>
             </nuxt-link>
           </div>
-        </div>
+        </div> -->
         <!-- ここまでコメントアウト -->
-        
+
         <!-- ここからコメントアウト外す -->
-        <!-- <div class="products">
-          <div v-for="content in contents.contents" :key="content.id" class="eachProduct">
+        <div class="products">
+          <div
+            v-for="content in contents.contents"
+            :key="content.id"
+            class="eachProduct"
+          >
             <nuxt-link :to="`/works/${content.id}/`">
               <div class="productWrapper">
                 <div class="title">
-                <p class="works__name">{{ content.title }}</p>
+                  <p class="works__name">{{ content.title }}</p>
                 </div>
                 <figure class="productImage">
                   <img
@@ -66,15 +70,13 @@
               </div>
             </nuxt-link>
           </div>
-        </div> -->
+        </div>
         <!-- ここまでコメントアウト外す -->
-        
       </div>
-      
     </section>
     <div class="button-area">
-          <nuxt-link to="/contact/" class="button">お問い合わせ</nuxt-link>
-      </div>
+      <nuxt-link to="/contact/" class="button">お問い合わせ</nuxt-link>
+    </div>
   </div>
 </template>
 
@@ -94,36 +96,35 @@ body {
 #works {
   background-color: orange;
 }
-.products{
+.products {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-
 }
-.eachProduct{
+.eachProduct {
   width: 50%;
 }
-.productWrapper{
+.productWrapper {
   display: flex;
   flex-wrap: wrap;
 }
 img {
   display: block;
   margin-left: auto;
-  margin-right: auto 
+  margin-right: auto;
 }
 </style>
 
 <script>
 // コメントアウト外す
-// export default {
-//   async asyncData({ $microcms }) {
-//     const contents = await $microcms.get({
-//       endpoint: 'products'
-//     })
-//     return {
-//       contents,
-//     }
-//   },
-// }
+export default {
+  async asyncData({ $microcms }) {
+    const contents = await $microcms.get({
+      endpoint: "contents",
+    });
+    return {
+      contents,
+    };
+  },
+};
 </script>
