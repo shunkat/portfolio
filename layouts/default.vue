@@ -6,11 +6,11 @@
       <v-spacer />
     </v-app-bar>
     <v-main>
-      <v-container>
+      <v-container fluid>
         <nuxt />
       </v-container>
     </v-main>
-    <p class="footer">© 2022 MarkingCloud</p>
+    <p class="footer mt-6">© 2022 MarkingCloud</p>
   </v-app>
 </template>
 
@@ -33,6 +33,10 @@ export default {
 <style>
 * {
   font-family: auto;
+}
+
+.container {
+  padding: 0;
 }
 
 .footer {
