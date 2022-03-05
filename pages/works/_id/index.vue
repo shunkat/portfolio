@@ -1,40 +1,41 @@
 <template>
-  <div class="child">
-    <h1 class="title">{{ product.title }}</h1>
-    <div class="productWrapper">
-      <figure class="capture">
-        <img
-          :width="260"
-          :height="260"
-          :src="product.capture.url"
-          :alt="product.title"
-        />
-      </figure>
+  <v-row justify="center" align-content="center">
+    <v-col cols="12" align="center">
+      <v-spacer class="my-16" />
+      <v-row>
+        <!-- 画像 -->
+        <v-col cols="7" align="right">
+          <v-img contain height="300" :src="product.capture.url" />
+        </v-col>
 
-      <!-- <div class="detail">
-        <h3>概要</h3>
-        <div class="overView">{{ product.overview }}</div>
-        <h4>url</h4>
-        <div class="url">{{ product.url }}</div>
-        <h4>使用技術</h4>
-        <div class="tech">{{ product.tech }}</div>
-        <h4>果たした役割</h4>
-        <div class="role">{{ product.role }}</div>
-      </div> -->
-    </div>
+        <!-- タイトル・概要 -->
+        <v-col cols="5" align="left" class="my-8">
+          <p class="text-h3 mb-8">{{ product.title }}</p>
+          <p class="text-h6 text--primary">{{ product.overview }}</p>
+        </v-col>
+      </v-row>
+      <v-spacer class="my-16" />
+
+      <!-- 概要 -->
+      <p class="text-h5">URL</p>
+      <a :href="product.url">
+        <p class="text-h6 text--secondary mb-12">{{ product.url }}</p>
+      </a>
+
+      <!-- 使用技術 -->
+      <p class="text-h5">使用技術</p>
+      <p class="text-h6 text--secondary mb-12">{{ product.tech }}</p>
+
+      <!-- 果たした役割 -->
+      <p class="text-h5">果たした役割</p>
+      <p class="text-h6 text--secondary mb-12">{{ product.role }}</p>
+    </v-col>
+
     <p class="button-area">
       <nuxt-link to="/">back</nuxt-link>
     </p>
-  </div>
+  </v-row>
 </template>
-
-<style lang="css" scoped>
-.productWrapper {
-  display: flex;
-  padding: 20px;
-  background-color: orange;
-}
-</style>
 
 <script>
 export default {
