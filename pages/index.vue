@@ -1,129 +1,84 @@
 <template>
-  <div>
+  <v-row justify="center">
     <!-- ここから自分の情報に編集してください -->
-    <section id="introduction" class="primary">
-      <div class="container">
-        <div class="profile">
-          <h2 class="middleTitle">自己紹介</h2>
-          <h1 class="name">「名前をここに」</h1>
-          <div class="tech">
-            <h3>技術領域</h3>
-            <p>「技術スタックをここに」</p>
-          </div>
-          <div class="hobby">
-            <h3>趣味</h3>
-            <p>「趣味をここに」</p>
-          </div>
-          <h3>どんな人</h3>
-          <p class="detailintroduction">
-            「こまかい自己紹介はここに」<br />
-            例えば、どうしてエンジニアになったのかorなりたいのかなど<br />
-            もし思いつかなければ好きなご飯のおかずを書いてください。
-          </p>
-        </div>
-        <figure class="selfee">
-          <img src="/yourIcon.jpg" width=390 height=390 alt="your name" />
-        </figure>
-      </div>
-    </section>
-    <!-- ここまで編集 -->
+    <!-- ヘッダー画像 -->
+    <v-img src="/header_img.png" width="100%" height="240" />
 
-    <section id="works" class="primary">
-      <div class="container">
-        <h2 class="middleTitle">制作物</h2>
+    <v-col cols="12" align="center">
+      <!-- アイコン画像 -->
+      <img
+        src="/yourIcon.jpg"
+        width="240"
+        height="240"
+        class="ma-12 rounded-circle"
+      />
+      <!-- 自己紹介 -->
+      <p class="text-h3">牧 クラウド</p>
+      <p class="text-h6 text--secondary mb-12">
+        「こまかい自己紹介はここに」<br />
+        例えば、どうしてエンジニアになったのか or なりたいのかなど。<br />
+        もし思いつかなければ好きなご飯のおかずを書いてください。
+      </p>
 
-        <!-- ここからコメントアウト -->
-        <div class="products">
-          <div v-for="i of 3" :key="i" class="eachProduct">
-            <nuxt-link :to="`/works/`">
-              <div class="productWrapper">
-                <p class="productTitle">サンプルプロダクト{{ i }}</p>
-                <figure class="productImage">
-                  <img :src="i+'.png'" :width="260" :height="260" :alt="sampleImageOfProduct">
-                </figure>
-              </div>
-            </nuxt-link>
-          </div>
-        </div>
-        <!-- ここまでコメントアウト -->
-        
-        <!-- ここからコメントアウト外す -->
-        <!-- <div class="products">
-          <div v-for="content in contents.contents" :key="content.id" class="eachProduct">
-            <nuxt-link :to="`/works/${content.id}/`">
-              <div class="productWrapper">
-                <div class="title">
-                <p class="works__name">{{ content.title }}</p>
-                </div>
-                <figure class="productImage">
-                  <img
-                    :width="260"
-                    :height="260"
-                    :src="content.capture.url"
-                    :alt="content.title"
-                  />
-                </figure>
-              </div>
-            </nuxt-link>
-          </div>
-        </div> -->
-        <!-- ここまでコメントアウト外す -->
-        
-      </div>
-      
-    </section>
+      <!-- スキル -->
+      <p class="text-h4">スキル</p>
+      <p class="text-h6 text--secondary mb-12">技術スタックをここに</p>
+
+      <!-- 趣味 -->
+      <p class="text-h4">趣味</p>
+      <p class="text-h6 text--secondary mb-12">趣味をここに</p>
+
+      <!-- 制作物 -->
+      <p class="text-h4">制作物</p>
+
+      <!-- ここからコメントアウト -->
+      <v-row class="ma-12">
+        <v-col cols="4" class="px-12" v-for="i of 3" :key="i">
+          <nuxt-link :to="`/works/`">
+            <v-card elevation="2" outlined>
+              <v-card-title>サンプルプロダクト{{ i }}</v-card-title>
+              <v-img :src="i + '.png'" height="240" />
+            </v-card>
+          </nuxt-link>
+        </v-col>
+      </v-row>
+      <!-- ここまでコメントアウト -->
+
+      <!-- ここからコメントアウト外す -->
+      <v-row class="ma-12">
+        <v-col
+          cols="4"
+          class="px-12"
+          v-for="content in contents.contents"
+          :key="content.id"
+        >
+          <nuxt-link :to="`/works/${content.id}/`">
+            <v-card elevation="2" outlined>
+              <v-card-title>{{ content.title }}</v-card-title>
+              <v-img :src="content.capture.url" height="240" />
+            </v-card>
+          </nuxt-link>
+        </v-col>
+      </v-row>
+      <!-- ここまでコメントアウト外す -->
+    </v-col>
+
     <div class="button-area">
-          <nuxt-link to="/contact/" class="button">お問い合わせ</nuxt-link>
-      </div>
-  </div>
+      <nuxt-link to="/contact/" class="button">お問い合わせ</nuxt-link>
+    </div>
+  </v-row>
 </template>
-
-<style lang="css" scoped>
-body {
-  width: 1250px;
-}
-.mainVisual img {
-  width: 100%;
-}
-
-.container {
-  display: flex;
-  flex-wrap: wrap;
-  padding: 12px;
-}
-#works {
-  background-color: orange;
-}
-.products{
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-
-}
-.eachProduct{
-  width: 50%;
-}
-.productWrapper{
-  display: flex;
-  flex-wrap: wrap;
-}
-img {
-  display: block;
-  margin-left: auto;
-  margin-right: auto 
-}
-</style>
 
 <script>
 // コメントアウト外す
-// export default {
-//   async asyncData({ $microcms }) {
-//     const contents = await $microcms.get({
-//       endpoint: 'products'
-//     })
-//     return {
-//       contents,
-//     }
-//   },
-// }
+export default {
+  async asyncData({ $microcms }) {
+    const contents = await $microcms.get({
+      endpoint: "contents",
+    });
+    return {
+      contents,
+    };
+  },
+};
 </script>
