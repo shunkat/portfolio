@@ -32,8 +32,8 @@ export default {
 
 <style>
 * {
-  font-family: auto;
-}
+    font-family: "Montserrat","Helvetica Neue",Arial,"Hiragino Kaku Gothic ProN","Hiragino Sans";
+  }
 
 .container {
   padding: 0;

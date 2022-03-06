@@ -45,7 +45,7 @@
       <!-- ここまでコメントアウト -->
 
       <!-- ここからコメントアウト外す -->
-      <v-row class="ma-12">
+      <!-- <v-row class="ma-12">
         <v-col
           cols="4"
           class="px-12"
@@ -59,7 +59,7 @@
             </v-card>
           </nuxt-link>
         </v-col>
-      </v-row>
+      </v-row> -->
       <!-- ここまでコメントアウト外す -->
     </v-col>
 
@@ -71,14 +71,14 @@
 
 <script>
 // コメントアウト外す
-export default {
-  async asyncData({ $microcms }) {
-    const contents = await $microcms.get({
-      endpoint: "contents",
-    });
-    return {
-      contents,
-    };
-  },
-};
+// export default {
+//   async asyncData({ $microcms }) {
+//     const contents = await $microcms.get({
+//       endpoint: "contents",
+//     });
+//     return {
+//       contents,
+//     };
+//   },
+// };
 </script>
