@@ -41,7 +41,7 @@
 export default {
   async asyncData({ $microcms, params }) {
     const product = await $microcms.get({
-      endpoint: `contents/${params.id}`,
+      endpoint: `products/${params.id}`,
     });
     return {
       product,
