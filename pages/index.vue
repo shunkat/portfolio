@@ -2,12 +2,12 @@
   <v-row justify="center">
     <!-- ここから自分の情報に編集してください -->
     <!-- ヘッダー画像 -->
-    <v-img src="/selfee.jpg" width="100%" height="240" />
+    <v-img src="/header_img.png" width="100%" height="240" />
 
     <v-col cols="12" align="center">
       <!-- アイコン画像 -->
       <img
-        src="/yourIcon.jpg"
+        src="/selfe.jpg"
         width="240"
         height="240"
         class="ma-12 rounded-circle"
