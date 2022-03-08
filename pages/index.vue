@@ -2,7 +2,7 @@
   <v-row justify="center">
     <!-- ここから自分の情報に編集してください -->
     <!-- ヘッダー画像 -->
-    <v-img src="/header_img.png" width="100%" height="240" />
+    <v-img src="/selfee.jpg" width="100%" height="240" />
 
     <v-col cols="12" align="center">
       <!-- アイコン画像 -->
@@ -13,38 +13,25 @@
         class="ma-12 rounded-circle"
       />
       <!-- 自己紹介 -->
-      <p class="text-h3">牧 クラウド</p>
+      <p class="text-h3">加藤　駿</p>
       <p class="text-h6 text--secondary mb-12">
-        「こまかい自己紹介はここに」<br />
-        例えば、どうしてエンジニアになったのか or なりたいのかなど。<br />
-        もし思いつかなければ好きなご飯のおかずを書いてください。
+        新卒1年目Androidアプリエンジニアです。<br />
+        大学3年生の冬の終わりに、インターン先でプログラミングを触り、面白さに気づきました。<br />
+        最近はFlutterとVueを触って遊んでいます。<br />
+        ハッカソン出場がマイブームなので、どなたか一緒に出場しませんか？
       </p>
 
       <!-- スキル -->
       <p class="text-h4">スキル</p>
-      <p class="text-h6 text--secondary mb-12">技術スタックをここに</p>
+      <p class="text-h6 text--secondary mb-12">Kotlin / Flutter / Ruby on Rails / Vue / AWS</p>
 
       <!-- 趣味 -->
       <p class="text-h4">趣味</p>
-      <p class="text-h6 text--secondary mb-12">趣味をここに</p>
+      <p class="text-h6 text--secondary mb-12">ハッカソン出場 / 陶芸 / ツーリング / ダーツ</p>
 
       <!-- 制作物 -->
       <p class="text-h4">制作物</p>
 
-      <!-- ここからコメントアウト -->
-      <v-row class="ma-12">
-        <v-col cols="4" class="px-12" v-for="i of 3" :key="i">
-          <nuxt-link :to="`/works/`">
-            <v-card elevation="2" outlined>
-              <v-card-title>サンプルプロダクト{{ i }}</v-card-title>
-              <v-img :src="i + '.png'" height="240" />
-            </v-card>
-          </nuxt-link>
-        </v-col>
-      </v-row>
-      <!-- ここまでコメントアウト -->
-
-      <!-- ここからコメントアウト外す -->
       <v-row class="ma-12">
         <v-col
           cols="4"
@@ -60,7 +47,6 @@
           </nuxt-link>
         </v-col>
       </v-row>
-      <!-- ここまでコメントアウト外す -->
     </v-col>
 
     <div class="button-area">
@@ -70,7 +56,6 @@
 </template>
 
 <script>
-// コメントアウト外す
 export default {
   async asyncData({ $microcms }) {
     const contents = await $microcms.get({
