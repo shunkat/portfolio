@@ -5,30 +5,30 @@
       <v-row>
         <!-- 画像 -->
         <v-col cols="6" align="right">
-          <v-img contain height="300" :src="product.capture.url" />
+          <v-img contain height="300" :src="content.capture.url" />
         </v-col>
 
         <!-- タイトル・概要 -->
         <v-col cols="6" align="left" class="my-8">
-          <p class="text-h3 mb-8">{{ product.title }}</p>
-          <p class="text-h6 text--primary">{{ product.overview }}</p>
+          <p class="text-h3 mb-8">{{ content.title }}</p>
+          <p class="text-h6 text--primary">{{ content.overview }}</p>
         </v-col>
       </v-row>
       <v-spacer class="my-16" />
 
       <!-- 概要 -->
       <p class="text-h5">URL</p>
-      <a :href="product.url">
-        <p class="text-h6 text--secondary mb-12">{{ product.url }}</p>
+      <a :href="content.url">
+        <p class="text-h6 text--secondary mb-12">{{ content.url }}</p>
       </a>
 
       <!-- 使用技術 -->
       <p class="text-h5">使用技術</p>
-      <p class="text-h6 text--secondary mb-12">{{ product.tech }}</p>
+      <p class="text-h6 text--secondary mb-12">{{ content.tech }}</p>
 
       <!-- 果たした役割 -->
       <p class="text-h5">果たした役割</p>
-      <p class="text-h6 text--secondary mb-12">{{ product.role }}</p>
+      <p class="text-h6 text--secondary mb-12">{{ content.role }}</p>
     </v-col>
 
     <p class="button-area">
@@ -40,11 +40,11 @@
 <script>
 export default {
   async asyncData({ $microcms, params }) {
-    const product = await $microcms.get({
+    const content = await $microcms.get({
       endpoint: `contents/${params.id}`,
     });
     return {
-      product,
+      content,
     };
   },
 };
