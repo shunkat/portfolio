@@ -13,9 +13,9 @@
         class="ma-12 rounded-circle"
       />
       <!-- 自己紹介 -->
-      <p class="text-h3">加藤　駿</p>
+      <p class="text-h3">shunkat</p>
       <p class="text-h6 text--secondary mb-12">
-        新卒1年目Androidアプリエンジニアです。<br />
+        ギリギリ新卒1年目Androidアプリエンジニアです。<br />
         大学3年生の冬の終わりに、インターン先でプログラミングを触り、面白さに気づきました。<br />
         最近はFlutterとVueを触って遊んでいます。<br />
         ハッカソン出場がマイブームなので、どなたか一緒に出場しませんか？
