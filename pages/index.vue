@@ -33,23 +33,6 @@
 
       <!-- ここからコメントアウト外す -->
       <!-- <v-row class="ma-12">
-        <v-col cols="4" class="px-12" v-for="i of 3" :key="i">
-          <nuxt-link :to="`/works/`">
-            <v-card elevation="2" outlined>
-              <v-card-title>サンプルプロダクト{{ i }}</v-card-title>
-              <v-img :src="i + '.png'" height="240" />
-            </v-card>
-          </nuxt-link>
-        </v-col>
-      </v-row> -->
-      <!-- ここまでコメントアウト外す -->
-      
-
-
-
-
-      <!-- ここからコメントアウト外す -->
-      <!-- <v-row class="ma-12">
         <v-col
           cols="4"
           class="px-12"

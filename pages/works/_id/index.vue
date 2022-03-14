@@ -2,18 +2,21 @@
   <v-row justify="center" align-content="center" class="mx-16">
     <v-col cols="12" align="center">
       <v-spacer class="my-16" />
-      <v-row>
-        <!-- 画像 -->
+
+      <!-- ここからコメントアウト外す -->
+      <!-- <v-row>
         <v-col cols="6" align="right">
           <v-img contain height="300" :src="content.capture.url" />
         </v-col>
 
-        <!-- タイトル・概要 -->
         <v-col cols="6" align="left" class="my-8">
           <p class="text-h3 mb-8">{{ content.title }}</p>
           <p class="text-h6 text--primary">{{ content.overview }}</p>
         </v-col>
-      </v-row>
+      </v-row> -->
+      <!-- ここまでコメントアウト外す -->
+
+      
       <v-spacer class="my-16" />
 
       <!-- 概要 -->
