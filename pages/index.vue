@@ -71,8 +71,6 @@ export default {
 }
 // ここまで削除
 
-
-
 // この下からコメントアウト外す：コードミッション4
 // export default {
 //   async asyncData({ $microcms }) {
