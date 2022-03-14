@@ -75,12 +75,12 @@
 
 <script>
 
-
-
-
-
-
-
+export default {
+  data() {
+    return {
+      contents: {contents:[{id:1,title:'sample1',url:'',overview:'',url:'',tech:'',role:'',capture:{url:'1.png'}},{id:2,title:'sample2',url:'',overview:'',url:'',tech:'',role:'',capture:{url:'2.png'}}]}};
+  }
+}
 
 
 
