@@ -54,7 +54,7 @@
 </template>
 
 <script>
-// ここから削除
+// ここから削除：コードミッション4
 export default {
   data() {
     return { contents: 
@@ -73,7 +73,7 @@ export default {
 
 
 
-// ここからコメントアウト外す
+// この下からコメントアウト外す：コードミッション4
 // export default {
 //   async asyncData({ $microcms }) {
 //     const contents = await $microcms.get({
@@ -84,5 +84,5 @@ export default {
 //     };
 //   },
 // };
-// ここまでコメントアウト外す
+// この上までコメントアウト外す
 </script>

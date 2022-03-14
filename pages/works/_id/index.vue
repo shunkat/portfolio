@@ -41,17 +41,17 @@
 </template>
 
 <script>
-// ここから削除
+// ここから削除：「コードミッション4」
 export default {
   data() {
     return { 
-    content:{id:1,title:'sample1',url:'',overview:'',tech:'',role:'',capture:{url:'1.png'}}
+    content:{id:1,title:'sample1',url:'',overview:'',tech:'',role:'',capture:{url:'/1.png'}}
     };
   }
 }
 // ここまで削除
 
-// この下からコメントアウト外す：「コードミッション3」
+// この下からコメントアウト外す：「コードミッション4」
 // export default {
 //   async asyncData({ $microcms, params }) {
 //     const content = await $microcms.get({
