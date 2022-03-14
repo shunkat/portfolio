@@ -31,8 +31,8 @@
       <!-- 制作物 -->
       <p class="text-h4">制作物</p>
 
-      <!-- ここからコメントアウト -->
-      <v-row class="ma-12">
+      <!-- ここからコメントアウト外す -->
+      <!-- <v-row class="ma-12">
         <v-col cols="4" class="px-12" v-for="i of 3" :key="i">
           <nuxt-link :to="`/works/`">
             <v-card elevation="2" outlined>
@@ -41,9 +41,13 @@
             </v-card>
           </nuxt-link>
         </v-col>
-      </v-row>
-      <!-- ここまでコメントアウト -->
+      </v-row> -->
+      <!-- ここまでコメントアウト外す -->
       
+
+
+
+
       <!-- ここからコメントアウト外す -->
       <!-- <v-row class="ma-12">
         <v-col
@@ -70,7 +74,17 @@
 </template>
 
 <script>
-// コメントアウト外す
+
+
+
+
+
+
+
+
+
+
+// ここからコメントアウト外す
 // export default {
 //   async asyncData({ $microcms }) {
 //     const contents = await $microcms.get({
@@ -81,4 +95,5 @@
 //     };
 //   },
 // };
+// ここまでコメントアウト外す
 </script>
