@@ -35,7 +35,7 @@
       <!-- この下からコメントアウト外す：「Vue.jsの感動ポイント」 -->
         <!-- <v-col cols="4" class="px-12"
           v-for="content in contents.contents" :key="content.id">
-          <nuxt-link :to="`/works/${content.id}/`">
+          <nuxt-link :to="``">
             <v-card elevation="2" height="200">
               <v-card-title>{{ content.title }}</v-card-title>
               <v-img :src="content.capture.url" height="240" />
@@ -54,7 +54,7 @@
 </template>
 
 <script>
-// ここからコメントアウト
+// ここから削除
 export default {
   data() {
     return { contents: 
@@ -68,7 +68,7 @@ export default {
     };
   }
 }
-// ここまでコメントアウト
+// ここまで削除
 
 
 
