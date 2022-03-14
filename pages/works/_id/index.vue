@@ -16,7 +16,7 @@
       </v-row> -->
       <!-- ここまでコメントアウト外す -->
 
-      
+
       <v-spacer class="my-16" />
 
       <!-- 概要 -->
@@ -41,14 +41,26 @@
 </template>
 
 <script>
+// ここから削除
 export default {
-  async asyncData({ $microcms, params }) {
-    const content = await $microcms.get({
-      endpoint: `contents/${params.id}`,
-    });
-    return {
-      content,
+  data() {
+    return { 
+    content:{id:1,title:'sample1',url:'',overview:'',tech:'',role:'',capture:{url:'1.png'}}
     };
-  },
-};
+  }
+}
+// ここまで削除
+
+// この下からコメントアウト外す：「コードミッション3」
+// export default {
+//   async asyncData({ $microcms, params }) {
+//     const content = await $microcms.get({
+//       endpoint: `contents/${params.id}`,
+//     });
+//     return {
+//       content,
+//     };
+//   },
+// };
+// この上までコメントアウト外す
 </script>

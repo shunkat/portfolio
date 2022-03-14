@@ -32,7 +32,7 @@
       <p class="text-h4">制作物</p>
       <v-row class="ma-12">
 
-      <!-- この下からコメントアウト外す：「Vue.jsの感動ポイント」 -->
+      <!-- この下からコメントアウト外す：「コードミッション1」 -->
         <!-- <v-col cols="4" class="px-12"
           v-for="content in contents.contents" :key="content.id">
           <nuxt-link :to="``">
@@ -60,6 +60,7 @@ export default {
     return { contents: 
     {contents:
       [
+        // サンプルデータ群
         {id:1,title:'sample1',url:'',overview:'',url:'',tech:'',role:'',capture:{url:'1.png'}},
         {id:2,title:'sample2',url:'',overview:'',url:'',tech:'',role:'',capture:{url:'2.png'}},
         {id:2,title:'sample3',url:'',overview:'',url:'',tech:'',role:'',capture:{url:'3.png'}},
