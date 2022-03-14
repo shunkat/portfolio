@@ -30,24 +30,21 @@
 
       <!-- 制作物 -->
       <p class="text-h4">制作物</p>
+      <v-row class="ma-12">
 
-      <!-- ここからコメントアウト外す -->
-      <!-- <v-row class="ma-12">
-        <v-col
-          cols="4"
-          class="px-12"
-          v-for="content in contents.contents"
-          :key="content.id"
-        >
+      <!-- この下からコメントアウト外す：「Vue.jsの感動ポイント」 -->
+        <!-- <v-col cols="4" class="px-12"
+          v-for="content in contents.contents" :key="content.id">
           <nuxt-link :to="`/works/${content.id}/`">
             <v-card elevation="2" height="200">
               <v-card-title>{{ content.title }}</v-card-title>
               <v-img :src="content.capture.url" height="240" />
             </v-card>
-          </nuxt-link>
-        </v-col>
-      </v-row> -->
-      <!-- ここまでコメントアウト外す -->
+          </nuxt-link> 
+        </v-col> -->
+      <!-- この上までコメントアウト外す -->
+
+      </v-row>
     </v-col>
 
     <div class="button-area">
@@ -57,13 +54,21 @@
 </template>
 
 <script>
-
+// ここからコメントアウト
 export default {
   data() {
-    return {
-      contents: {contents:[{id:1,title:'sample1',url:'',overview:'',url:'',tech:'',role:'',capture:{url:'1.png'}},{id:2,title:'sample2',url:'',overview:'',url:'',tech:'',role:'',capture:{url:'2.png'}}]}};
+    return { contents: 
+    {contents:
+      [
+        {id:1,title:'sample1',url:'',overview:'',url:'',tech:'',role:'',capture:{url:'1.png'}},
+        {id:2,title:'sample2',url:'',overview:'',url:'',tech:'',role:'',capture:{url:'2.png'}},
+        {id:2,title:'sample3',url:'',overview:'',url:'',tech:'',role:'',capture:{url:'3.png'}},
+      ]
+    }
+    };
   }
 }
+// ここまでコメントアウト
 
 
 
