@@ -45,7 +45,7 @@
 export default {
   data() {
     return { 
-    content:{id:1,title:'sample1',url:'',overview:'',tech:'',role:'',capture:{url:'/1.png'}}
+    content:{id:1,title:'sample1（これはタイトル）',url:'',overview:'testOverViewTextこれは詳細部分',tech:'',role:'',capture:{url:'/1.png'}}
     };
   }
 }
