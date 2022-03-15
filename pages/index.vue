@@ -63,7 +63,7 @@ export default {
         // サンプルデータ群
         {id:1,title:'sample1',url:'',overview:'',url:'',tech:'',role:'',capture:{url:'1.png'}},
         {id:2,title:'sample2',url:'',overview:'',url:'',tech:'',role:'',capture:{url:'2.png'}},
-        {id:2,title:'sample3',url:'',overview:'',url:'',tech:'',role:'',capture:{url:'3.png'}},
+        {id:3,title:'sample3',url:'',overview:'',url:'',tech:'',role:'',capture:{url:'3.png'}},
       ]
     }
     };
